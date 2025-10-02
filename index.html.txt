@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Febrian</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6fb;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* NAVBAR */
+    nav {
+      background: #2c3e50;
+      padding: 15px 40px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo {
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #f39c12;
+    }
+
+    /* HEADER / HERO */
+    header {
+      position: relative;
+      text-align: center;
+      color: white;
+      margin-top: 60px; /* biar tidak ketutup navbar */
+    }
+    header img {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      filter: brightness(0.6);
+    }
+    header .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+
+    /* SECTION UMUM */
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2c3e50;
+      font-size: 2rem;
+    }
+
+    /* INFO GRID */
+    .info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .info div {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    /* KONTAK */
+    .contact {
+      text-align: center;
+    }
+    .contact a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      background: #2c3e50;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .contact a:hover {
+      background: #f39c12;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #2c3e50;
+      color: white;
+      margin-top: 50px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        background: #2c3e50;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        display: none;
+        padding: 10px;
+      }
+      nav ul.active {
+        display: flex;
+      }
+      nav .menu-toggle {
+        display: block;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+      .info {
+        grid-template-columns: 1fr;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+    @media(min-width: 769px) {
+      nav .menu-toggle {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">Febrian</div>
+    <div class="menu-toggle">☰</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#tentang">Tentang</a></li>
+      <li><a href="#profil">Profil</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home">
+    <img src="Bian.png" alt="Cover Febrian">
+    <div class="overlay">
+      <h1>Febrian Miracle Heavenly Kowel</h1>
+      <p>Mahasiswa Prodi Kimia (2024)</p>
+    </div>
+  </header>
+
+  <!-- TENTANG -->
+  <section id="tentang">
+    <h2>Tentang Saya</h2>
+    <p>
+      Halo! Saya <b>Febrian Miracle Heavenly Kowel</b>, lahir di Tomohon pada 13 Februari 2006.
+      Saat ini saya adalah mahasiswa Jurusan <b>Kimia</b> di tahun 2024. Saya berasal dari 
+      <b>Tareran, Rumoong Atas Dua</b>, dan memeluk agama <b>Kristen Protestan</b>.
+      Saya tertarik untuk terus belajar, mengembangkan diri, serta mengaplikasikan ilmu kimia 
+      dalam kehidupan sehari-hari maupun penelitian.
+    </p>
+  </section>
+
+  <!-- PROFIL -->
+  <section id="profil">
+    <h2>Informasi Profil</h2>
+    <div class="info">
+      <div><b>Nama:</b> Febrian Miracle Heavenly Kowel</div>
+      <div><b>TTL:</b> Tomohon, 13 Februari 2006</div>
+      <div><b>NIM:</b> 241011010042</div>
+      <div><b>Jurusan:</b> Kimia</div>
+      <div><b>Agama:</b> Kristen Protestan</div>
+      <div><b>Asal:</b> Tareran, Rumoong Atas Dua</div>
+    </div>
+  </section>
+
+  <!-- KONTAK -->
+  <section id="kontak">
+    <h2>Kontak</h2>
+    <div class="contact">
+      <a href="mailto:emailkamu@gmail.com">📧 Email</a>
+      <a href="https://github.com/username" target="_blank">💻 GitHub</a>
+      <a href="https://linkedin.com/in/username" target="_blank">🔗 LinkedIn</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2024 Febrian Miracle Heavenly Kowel | Dibuat dengan ❤️ untuk perkenalan diri</p>
+  </footer>
+
+  <!-- SCRIPT MENU RESPONSIVE -->
+  <script>
+    const toggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector("nav ul");
+    toggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+
+</body>
+</html>
